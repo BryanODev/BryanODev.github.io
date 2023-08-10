@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bryan O Gameplay Programmer | KeepWarm</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo"><a href="index.html"><img src = "Logo.png"></a></div>
+            <ul class="nav-links">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="#">Portfolio</a></li>
+              <li><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+            <ul class="social-links">
+              <li><a class="social-link" href="#"><img src="twitter-xxl.png"></a></li>
+              <li><a class="social-link" href="#"><img src="linkedin-xxl.png"></a></li>
+              <li><a class="social-link" href="#"><img src="github-mark.png"></a></li>
+              <li><a class="social-link" href="#"><img src="Itch.Io.png"></a></li>
+            </ul>
+        </nav>
+
+        <div class="project-intro">
+            <img src="Projects\KeepWarm\ANpZjC.png" alt="KeepWarm Icon">
+            <h1>Keep Warm</h1>
+            <p>
+                Escape the oncoming fire that is causing the space station to crumble into space. Be sure to avoid the metal crates that will slow you down and staying warm in 
+                the ever encompassing coldness of space. Use fire to speed yourself up and run further, just be careful though not to get too hot by spreading your fire to
+                any cardboard boxes you see lying around.<br>
+                <br>
+                Click here  to see and play project in Itch.io!<br>
+                Link To GitHub Repository
+            </p>
+
+            <h3>YOU CAN ALSO PLAY IT HERE BELOW!</h3>
+            <p>
+                Important: Screen will be white while the game is loading, please wait<br>
+                Note: If on mobile devices, you can play it at Itch.io page here: Click here
+            </p>
+
+            <h2>How to play:</h2>
+            <p>
+                Space to jump<br>
+                Enter to punch doors down (useful when you can't crash through it without being on fire)
+            </p>     
+        </div>
+
+        <div class="game-embed">
+            <iframe frameborder="0" src="https://itch.io/embed-upload/7247595?color=ffffff" allowfullscreen="" width="960" height="620"><a href="https://ldrg.itch.io/keep-warm">Play Keep Warm on itch.io</a></iframe>
+        </div>
+
+        <div class="image-gallery">
+            <div class="rowContainer">
+                <div class="gallery-column">
+                    <img src="Projects\KeepWarm\KeepWarm1.png" alt="Screenshot 1">
+                </div>
+                <div class="gallery-column">
+                    <img src="Projects\KeepWarm\KeepWarm3.png" alt="Screenshot 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <div class="centered-content">
+                <h1>About Project</h1>
+                <p>
+                    KEEP WARM is a 2.5D infinite runner made for the 8 Bit Jam. All tho’ we weren’t able to submit due to team size, we still “participated” as a team. 
+                    <br><br>
+                    The team consisted of 7 people, Producer, Audio (2), Artist (2) and Programmers (2). Our purpose as a team is to gather to make multiple games and learn together 
+                    as a team while making projects just like this for our portfolio! This was our first project together! 
+                    <br><br>
+                    Team Size: 7<br>
+                    Tools Used: Unity Engine<br>
+                    Languages: C#<br>
+                    Project Duration: 7 Days<br>
+                </p>
+                <h1>Development:</h1>
+                <p>
+                    In this project, I took on the roles of a gameplay programmer and UI programmer, while also working on various other tasks such as ensuring the correct export 
+                    and import of art assets. My main focus was on the Game Loop (Game Manager), Object Pooling, and the Level Controller, while my programming partner worked on 
+                    the player-related aspects.<br>
+                    <br>
+                    For the level generation in the game, our goal was to create levels that were always varied and challenging for the player, without becoming impossible. 
+                    In our game, the player collects fire to stay warm, but there are other obstacles that can extinguish the fire, requiring the player to maintain a certain 
+                    temperature range. To achieve this, we decided to use a combination of procedural generation and level chunk presets.<br>
+                    <br>
+                    We divided the level into segments, specifically six of them. Each segment is shifted and rearranged from left to right, ensuring that the game remains contained within a specific position in the world. Whenever the segments are shifted, the ones that are not currently visible to the player have their child objects changed, resulting in a large number of different level presets that can be spawned. By using presets instead of purely procedural generation, we were able to create a game that was more playable and balanced, rather than relying solely on randomness.
+                </p>
+
+                <h1>Takeaway</h1>
+                <p>
+                    This project marked the beginning of our team collaboration, and I'm still a part of it as we continue to work on different games every month. Initially, it was a bit challenging for me 
+                    to adjust to working with such talented individuals, as I was used to working alone. However, as time went on, I began to appreciate the experience of collaborating with other 
+                    passionate game developers and designers. This project taught me a lot about teamwork, and I hope that we can continue to stick together, making games and learning as a team. 
+                    It's a great feeling to be part of a group that shares the same passion for game development.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="rowContainer">
+                <div class="footer-column">
+                    <div class="ContactFooter">
+                        <h3>Contact:</h3>
+                        <p>BryanO_dev@outlook.com</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="logo"><img src = "Logo.png"></div>
+                </div>
+                <div class="footer-column">
+                    <ul class="social-links">
+                        <li><a class="social-link" href="#"><img src="twitter-xxl.png"></a></li>
+                        <li><a class="social-link" href="#"><img src="linkedin-xxl.png"></a></li>
+                        <li><a class="social-link" href="#"><img src="github-mark.png"></a></li>
+                        <li><a class="social-link" href="#"><img src="Itch.Io.png"></a></li>
+                      </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

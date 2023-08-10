@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bryan O Gameplay Programmer | CrocodileBalloonProject</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo"><a href="index.html"><img src = "Logo.png"></a></div>
+            <ul class="nav-links">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="#">Portfolio</a></li>
+              <li><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+            <ul class="social-links">
+              <li><a class="social-link" href="#"><img src="twitter-xxl.png"></a></li>
+              <li><a class="social-link" href="#"><img src="linkedin-xxl.png"></a></li>
+              <li><a class="social-link" href="#"><img src="github-mark.png"></a></li>
+              <li><a class="social-link" href="#"><img src="Itch.Io.png"></a></li>
+            </ul>
+        </nav>
+
+        <div class="project-intro">
+            <img src="Projects\CrocodileBalloonProject\GameIcon.png" alt="CROCODILEBALLOON PROJECT Icon">
+            <h1>CrocodileBalloon Project</h1>
+            <p>Project CrocodileBalloon is an upcoming mobile game where you take on the role of a crocodile tied to a balloon, embarking on an exciting airborne adventure to devour a sheep! Equipped with a fan, you'll navigate through the sky, gracefully gliding past obstacles and feasting on floating meats, all in pursuit of the delectable sheep awaiting you at the end of each level! As you progress, gather as much meat as possible to unlock a variety of skins for your crocodile, balloon, fan, and other delightful cosmetics, adding a touch of personalization to your thrilling aerial escapades! Stay tuned for the release of this exciting and mouthwatering game!</p>
+        </div>
+
+        <div class="image-gallery">
+            <div class="rowContainer">
+                <div class="gallery-column">
+                    <img src="Projects\CrocodileBalloonProject\Gameplay.gif" alt="Gameplay">
+                </div>
+                <div class="gallery-column">
+                    <img src="Projects\CrocodileBalloonProject\Screen1.png" alt="Screenshot 1">
+                </div>
+                <div class="gallery-column">
+                    <img src="Projects\CrocodileBalloonProject\Screen2.png" alt="Screenshot 2">
+                </div>
+                <div class="gallery-column">
+                    <img src="Projects\CrocodileBalloonProject\Screen3.png" alt="Screenshot 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <div class="centered-content">
+                <h1>About Project</h1>
+                <p>
+                    Project CrocodileBalloon is a 2.5D platformer game where you play as a little crocodile who is tied to a balloon to glide in 
+                    the air dodging obstacles and eating flying meat and a delicious yummy sheep at the end of each level! 
+                    <br><br>
+                    This is my most proud project of all. Its a project I’ve been working for a long time and dedicated a lot of time to develop. 
+                    It’s currently under development for Mobile platforms (Android & IOS). Everything in the project has been made by me except audio (music & some sound effects). 
+                    <br><br>
+                    Team Size: 1 (Solo Dev) <br>
+                    Tools Used: Unity Engine, Blender 2.8, Audacity <br>
+                    Languages: C# <br>
+                    Project Duration: (In Development) 7 months in <br>
+                    Genre: Platformer <br>
+                    Platforms: Mobile (Android & IOS) <br>
+                </p>
+
+                <h1>Game Features:</h1>
+                <p>
+                    -Simple and intuitive controls<br>
+                    -Fun gameplay mechanics and visuals<br>
+                    -Character & Props Customization<br>
+                    -A huge amount of levels and worlds<br>
+                    -Simple and intuitive controls<br>
+                    -Fun gameplay mechanics and visuals<br>
+                    -Character & Props Customization<br>
+                    -A huge amount of levels and worlds<br>
+                </p>
+
+                <h1>Development:</h1>
+                <p>
+                    Project Crocodile is being developed solely by me. Everything in this game, except for some music and sound effects, is made by me. 
+                    From 3D models and animations to programming and UI.
+                </p>
+
+                <h1>Technical Skills:</h1>
+                <p>
+                    This project is the most complex one I have worked on so far. It incorporates many systems and classes. Here are the aspects of this 
+                    project that I am most proud of:
+                </p>
+
+                <h2>Level Management:</h2>
+                <p>
+                    One of the systems I'm particularly proud of is how Levels and Worlds work in this project. I aimed to make the game as scalable 
+                    as possible when adding new levels and worlds. I designed the Level System to consist of Worlds, each with a unique theme such as Sky, Inferno, Space, etc. 
+                    Each world contains a large collection of levels (around 30 to 50). This allows for updates that exclusively introduce new worlds, akin to "DLCs" for the game. 
+                    Some worlds may even feature a mini-story to differentiate the gameplay, like the Medieval world where the crocodile becomes a knight and the sheep transforms 
+                    into a princess. This level organization was inspired by Super Mario games, where each world has a distinct theme.
+                    <br><br>
+                    The LevelManager class is responsible for tracking the current world, level, and loading. It utilizes a ScriptableObject class called LevelLibrary, 
+                    which holds all the data for worlds and levels. With this class, we can find the level name using the world index and level index, which we can then use to 
+                    load the corresponding scene in Unity.
+                </p>
+
+                <h2>GameMode Class:</h2>
+                <p>
+                    Similar to my other games, I have implemented a GameMode class that handles the start and end of the game. In this project, the GameMode class has 
+                    some additional functionalities. Whenever a new level is loaded, the GameMode ensures that all the necessary GameObjects for the player are created. 
+                    In this case, it includes the following: <br>
+                    -PlayerCamera<br>
+                    -PlayerController<br> 
+                    -PlayerCharacter (Crocodile)<br>
+                    <br>
+                    An advantage of spawning the character within the level, besides the technical aspects, is that if we decide to change the crocodile's appearance,
+                    we can simply modify and reload the scene, and the new skin will be applied.
+                </p>
+
+                <h2>ClassicGameMode Class:</h2>
+                <p>
+                    The ClassicGameMode class serves as the primary GameMode for stages that end when the crocodile eats the sheep. 
+                    The ClassicGameMode has a reference to an ICollectable, which, in this case, is the sheep that needs to be collected. Each collectable has an "OnStartCollectDelegate" delegate, which we use to bind the EndGame function.
+                    <br><br>
+                    By designing the GameMode Class to be as abstract as possible, I have the flexibility to modify and extend its base class as needed. 
+                    An example of another GameMode class could be one for an infinite level that only ends if the player loses, for instance.
+                </p>
+
+                <h2>Dependency Injection</h2>
+                <p>
+                    Introducing Dependency Injection into this project changed my way of thinking. With Zenject for Unity, a Dependency Injection framework, 
+                    I was able to decouple all my classes and use interfaces for better communication. I now incorporate DI into all my projects because I find it 
+                    incredibly useful. It improves code readability and testability. I used DI in most of the main system classes, such as PlayerUI, AudioManager, and LevelManager,
+                    which all run in the ProjectContext. I also employ DI in the GameMode class as a SceneContext, allowing classes that need to communicate with the GameMode to
+                     easily do so using the [Inject] property.
+                </p>
+
+                <h1>Design Process:</h1>
+                <p>
+                    I began working on Project CrocodileBalloon in early 2023, immediately after releasing the game WebHop for a Game Jam. Following the jam, I created the first 3D model of the protagonist (as shown in the image on the bottom left). 
+                    I have a fondness for quirky, cute, and silly-looking characters. Initially, I wasn't sure what I wanted to use the character for. However, I also had a sheep model with a similar style 
+                    and silly eyes. That's when the idea struck me: why not create a game featuring these two characters—a crocodile and a sheep?
+                    <br><br>
+                    Next, I contemplated the main mechanic of the game. It was a bit challenging, particularly because I tend to approach things in a logical manner. I couldn't envision the player controlling a crocodile in its natural form. 
+                    Then, I recalled an old idea I had for a mobile game involving a boy tethered to a balloon, using a fan for movement. That's when inspiration struck—I decided to replace the boy with the crocodile and tie it to a balloon with a sheep. 
+                    And that's how the initial idea was born!
+                </p>
+
+                <h1>Takeaway</h1>
+                <p>
+                    There’s so much more topics to cover of what I did on this project that I’m not completely able to explain in this overview. 
+                    <br><br>
+                    Project CrocodileBalloon is, by far, my favorite personal project. However, it still has a long way to go before its release. There are numerous levels, 
+                    features, and mechanics that need to be added. Currently, I am prototyping levels and engaging in constant playtesting to maximize the potential of each level. 
+                    Hopefully, in the next couple of months or the coming year, the game will be ready for people to enjoy on their phones. Throughout this project, 
+                    I have learned a great deal, including programming various systems (UI, LevelManagement, Game Logic), implementing save game functionality, and applying 
+                    SOLID principles in game development. Additionally, I have gained experience in utilizing Dependency Injection using Zenject/Extenject.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="rowContainer">
+                <div class="footer-column">
+                    <div class="ContactFooter">
+                        <h3>Contact:</h3>
+                        <p>BryanO_dev@outlook.com</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="logo"><img src = "Logo.png"></div>
+                </div>
+                <div class="footer-column">
+                    <ul class="social-links">
+                        <li><a class="social-link" href="#"><img src="twitter-xxl.png"></a></li>
+                        <li><a class="social-link" href="#"><img src="linkedin-xxl.png"></a></li>
+                        <li><a class="social-link" href="#"><img src="github-mark.png"></a></li>
+                        <li><a class="social-link" href="#"><img src="Itch.Io.png"></a></li>
+                      </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
