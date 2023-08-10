@@ -1,8 +1,11 @@
   /* Basic styling for the navigation bar */
   body
   {
+    font-family: 'Roboto', sans-serif;
     background-color: rgb(255, 255, 255);    
   }
+
+
 
   nav {
     display: flex;
