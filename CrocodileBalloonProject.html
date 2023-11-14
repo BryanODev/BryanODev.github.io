@@ -61,7 +61,7 @@
                 <h1>About Project</h1>
                 <p>
                     Project CrocodileBalloon is a 2.5D platformer game where you play as a little crocodile who is tied to a balloon to glide in 
-                    the air dodging obstacles and eating flying meat and a delicious yummy sheep at the end of each level! 
+                    the air dodging obstacles and eating flying meat and a delicious yummy sheep at the end of each level!
                     <br><br>
                     This is my most proud project of all. Its a project I’ve been working for a long time and dedicated a lot of time to develop. 
                     It’s currently under development for Mobile platforms (Android & IOS). Everything in the project has been made by me except audio (music & some sound effects). 
@@ -76,14 +76,10 @@
 
                 <h1>Game Features:</h1>
                 <p>
-                    -Simple and intuitive controls<br>
-                    -Fun gameplay mechanics and visuals<br>
-                    -Character & Props Customization<br>
-                    -A huge amount of levels and worlds<br>
-                    -Simple and intuitive controls<br>
-                    -Fun gameplay mechanics and visuals<br>
-                    -Character & Props Customization<br>
-                    -A huge amount of levels and worlds<br>
+                    <b>-Simple and intuitive controls:</b>  Ensuring an accessible and enjoyable gameplay experience.<br><br>
+                    <b>-Engaging Mechanics and Visuals:</b> Bringing fun and vibrancy to every moment of the game.<br><br>
+                    <b>-Character & Props Customization:</b> Allowing players to personalize their crocodile and <br><br>
+                    <b>-Expansive Level Design:</b> Featuring multiple worlds, each with its unique theme and gameplay challenges.<br>
                 </p>
 
                 <h1>Development:</h1>
@@ -94,21 +90,14 @@
 
                 <h1>Technical Skills:</h1>
                 <p>
-                    This project is the most complex one I have worked on so far. It incorporates many systems and classes. Here are the aspects of this 
-                    project that I am most proud of:
+                    This project is the most complex one I have worked on so far. It incorporates many systems and classes. Here's the top highlights of this project:
                 </p>
 
                 <h2>Level Management:</h2>
                 <p>
-                    One of the systems I'm particularly proud of is how Levels and Worlds work in this project. I aimed to make the game as scalable 
-                    as possible when adding new levels and worlds. I designed the Level System to consist of Worlds, each with a unique theme such as Sky, Inferno, Space, etc. 
-                    Each world contains a large collection of levels (around 30 to 50). This allows for updates that exclusively introduce new worlds, akin to "DLCs" for the game. 
-                    Some worlds may even feature a mini-story to differentiate the gameplay, like the Medieval world where the crocodile becomes a knight and the sheep transforms 
-                    into a princess. This level organization was inspired by Super Mario games, where each world has a distinct theme.
-                    <br><br>
                     The LevelManager class is responsible for tracking the current world, level, and loading. It utilizes a ScriptableObject class called LevelLibrary, 
                     which holds all the data for worlds and levels. With this class, we can find the level name using the world index and level index, which we can then use to 
-                    load the corresponding scene in Unity.
+                    load the corresponding scene in Unity. This data is also used to save the game and load the last world and level the player visited, and which levels are unlocked or locked.
                 </p>
 
                 <h2>GameMode Class:</h2>
@@ -120,26 +109,17 @@
                     -PlayerController<br> 
                     -PlayerCharacter (Crocodile)<br>
                     <br>
-                    An advantage of spawning the character within the level, besides the technical aspects, is that if we decide to change the crocodile's appearance,
-                    we can simply modify and reload the scene, and the new skin will be applied.
+                    I learned this from Unreal Engine's Architecture. I always looked into Unreal Engine when ever I wanna learn complex things like Movement in Kinematic Characters due to being open source.
+                    I have gotten so used to it that now on any engine I use, I try to follow similar architecture.
                 </p>
 
-                <h2>ClassicGameMode Class:</h2>
-                <p>
-                    The ClassicGameMode class serves as the primary GameMode for stages that end when the crocodile eats the sheep. 
-                    The ClassicGameMode has a reference to an ICollectable, which, in this case, is the sheep that needs to be collected. Each collectable has an "OnStartCollectDelegate" delegate, which we use to bind the EndGame function.
-                    <br><br>
-                    By designing the GameMode Class to be as abstract as possible, I have the flexibility to modify and extend its base class as needed. 
-                    An example of another GameMode class could be one for an infinite level that only ends if the player loses, for instance.
-                </p>
-
-                <h2>Dependency Injection</h2>
+                <h2>Dependency Injection with Zenject</h2>
                 <p>
                     Introducing Dependency Injection into this project changed my way of thinking. With Zenject for Unity, a Dependency Injection framework, 
                     I was able to decouple all my classes and use interfaces for better communication. I now incorporate DI into all my projects because I find it 
                     incredibly useful. It improves code readability and testability. I used DI in most of the main system classes, such as PlayerUI, AudioManager, and LevelManager,
                     which all run in the ProjectContext. I also employ DI in the GameMode class as a SceneContext, allowing classes that need to communicate with the GameMode to
-                     easily do so using the [Inject] property.
+                    easily do so using the [Inject] property.
                 </p>
 
                 <h1>Design Process:</h1>
@@ -153,15 +133,20 @@
                     And that's how the initial idea was born!
                 </p>
 
+                <h1>Current Status and Future Plans:</h1>
+                <p>
+                    While Project CrocodileBalloon remains in active development, it stands as my favorite personal project to date. Constant playtesting and 
+                    prototyping are underway to refine and maximize the potential of each level. The game is slated for release on mobile platforms in the upcoming months, 
+                    promising players an enjoyable and immersive experience. Currently its being ported to a different engine called Godot. As a dev, I wanted to learn new 
+                    trending tools in the industry and I had to rewrite all this project from ground up due to all the new things I have learned in the past year. So I took this
+                    opportunity to learn a new engine while writing the project again!
+                </p>
+
                 <h1>Takeaway</h1>
                 <p>
-                    There’s so much more topics to cover of what I did on this project that I’m not completely able to explain in this overview. 
-                    <br><br>
-                    Project CrocodileBalloon is, by far, my favorite personal project. However, it still has a long way to go before its release. There are numerous levels, 
-                    features, and mechanics that need to be added. Currently, I am prototyping levels and engaging in constant playtesting to maximize the potential of each level. 
-                    Hopefully, in the next couple of months or the coming year, the game will be ready for people to enjoy on their phones. Throughout this project, 
-                    I have learned a great deal, including programming various systems (UI, LevelManagement, Game Logic), implementing save game functionality, and applying 
-                    SOLID principles in game development. Additionally, I have gained experience in utilizing Dependency Injection using Zenject/Extenject.
+                    Project CrocodileBalloon has been a tremendous learning experience, showcasing my ability to program diverse systems, implement save game functionality, and 
+                    apply SOLID principles in game development. The project is not just a game, it's a journey of growth and discovery, and I'm excited to share it with the 
+                    gaming community in the near future.
                 </p>
             </div>
         </div>
