@@ -1,189 +1,112 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <title>Bryan O Gameplay Programmer | Home</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <nav>
-            <div class="logo"><a href="index.html"><img src = "Logo.png"></a></div>
-            <ul class="nav-links">
-                <li><a class="nav-link" href="index.html">Home</a></li>
-                <li>
-                    <div class="nav-link">
-                        <div class="dropdown">
-                            <button class="dropbtn">Portfolio</button>
-                            <div class="dropdown-content">
-                                <a href="BombX2.html">BOMBX2</a>
-                                <a href="WebHop.html">WEBHOP</a>
-                                <a href="KeepWarm.html">KEEP WARM</a>
-                                <a href="MailDelivery.html">MAIL DELIVERY</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-              <li><a class="nav-link" href="Contact.html">Contact</a></li>
-            </ul>
-            <ul class="social-links">
-              <li><a class="social-link" href="https://twitter.com/BryanODev"><img src="twitter-xxl.png"></a></li>
-              <li><a class="social-link" href="https://www.linkedin.com/in/bryanodev/"><img src="linkedin-xxl.png"></a></li>
-              <li><a class="social-link" href="https://github.com/BryanODev"><img src="github-mark.png"></a></li>
-              <li><a class="social-link" href="https://bryano.itch.io/"><img src="Itch.Io.png"></a></li>
-            </ul>
-        </nav>
+<html lang="en">
 
-        <div class="intro">
-            <div class="intro-banner">
-                <h1>Hello, I'm Bryan!<br> 
-                A Game Programmer!</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan O. Román | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Images/Favicon/favicon-32x32.png">
+
+    <meta name="p:domain_verify" content="827b20ea86f2ec19e7ff7dd2987595a1"/>
+</head>
+
+<body>
+
+    <div id="language-modal" class="language-modal">
+        <div class="language-content">
+            <h2>Choose Your Language:<br>Escoje tu lenguaje:</h2>
+            <button class="lang-btn" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="es">Español</button>
+        </div>
+    </div>
+
+    <div id="header-container"></div>
+    <div id="social-bar-container"></div>
+
+    <main>
+         <div class="myself-introduction">
+            <div class="myself-introduction_info">
+                <h1 data-translate="trans-intro_hey" style="color: #2D9CDB">Hey, I'm Bryan!</h1>
+                <br>
+                <p data-translate="trans-intro-paragraph">
+                    Game Programmer passionate about creating immersive experiences and gameplay systems.
+                    I enjoy building engaging mechanics, experimenting with new technologies, and collaborating with talented teams to
+                    bring exciting games to life.
+                </p>
+                <p data-translate="trans-intro-bye">I’m glad you are here,</p>
+                <p data-translate="trans-intro-name" style="color: #2D9CDB">Bryan Román</p>
             </div>
-            <p class="intro-text">
-                A motivated programmer with a strong interest in game development. I love<br> 
-                learning and I enjoy creating immersive experiences for players. Committed<br> 
-                to pushing the boundaries of game development and delivering unforgettable<br> 
-                experiences that captivate players worldwide. I'm excited to work with<br> 
-                talented teams to bring exciting games to life. 
-            </p>
-            <br>
-            <div class="tako-pic">
-                <img src = "TakoPic.jpg">
-                <h1>Tako's says hi!</h1>
+
+            <div class="floating-icon">
+                <div class="icon-wrapper">
+                    <img id="icon" src="Images/Projects/BryanRoman/BRYANROMAN_PICTOGRAM_WHITE_BLACK.avif" alt="Icon">
+                </div>
+                <div class="floating-shadow"></div>
             </div>
         </div>
+        
+        <!--Projects-->
 
-        <hr>
+        <section class="projects" id="projects">
+            <h1 data-translate="trans-games">GAMES</h1>
+            <div class="projects-grid">
 
-        <div class="projects">
-            <h1>PROJECTS</h1>
-            <!--Main Projects (Most proud off)-->
-            <div class="rowContainer">            
-
-                <div class="big-projects">
-                    <a href="BombX2.html"><img src="Projects\BombX2\BOMBX2 - Itch Cover.png" alt="BOMBX2 Icon"></a>
-                    <h3>BOMBX2</h3>
-                    <p>Arcade bomb sorting game where you got to defuse bombs  by sorting them into their correct vault color!</p>
-                </div>
-            </div>
-            <!--Secondary Projects (Ones that are "ok")-->
-            <div class="rowContainer">
-                <div class="small-projects">
-                    <a href="WebHop.html"><img src="Projects\WebHop\WBtGhR.png" alt="WebHop Icon"></a>
-                    <h3>WEBHOP</h3>
-                    <p>Procedural generated hardcore platformer game where you play as a spider stuck in a flooding sewer and got to make your way out by webbing and hopping on flies!</p>
-                </div>
-                <div class="small-projects">
-                    <a href="KeepWarm.html"><img src="Projects\KeepWarm\ANpZjC.png" alt="KeepWarm Icon"></a>
-                    <h3>KEEP WARM</h3>
-                    <p>Infinite runner game where you play as a little astronaut running from a demolishing explosion in a spaceship! Run, dodge obstacle, break doors stay in a tolerable temperature to survive!</p>
-                </div>
-                <div class="small-projects">
-                    <a href="MailDelivery.html"><img src="Projects\MailDelivery\urCZEb.png" alt="MailDelivery Icon"></a>
-                    <h3>MAIL DELIVERY</h3>
-                    <p>Arcade racing game where you play as a mail delivery driver and got to deliver packages in the city.</p>
-                </div>
+                <a href="">
+                    <div class="project">
+                        <img src="Images\Project_Template.png" alt="Project 1">
+                    </div>
+                </a>
+                <!-- Add more projects as needed -->
             </div>
 
-            <hr>
-
-            <div class="biography">
-                <h1>MORE ABOUT ME</h1>
-                <div class="rowContainer">
-                    <div class="collumnContainer">
-                        <img src="Me.png" alt="A picture of me">
-                        <h3>This is me, before letting my hair grow!</h3>
+            <h1 data-translate="trans-techdemo">TECH DEMOS & TOOLS</h1>
+            <div class="projects-grid">
+                <a href="">
+                    <div class="project">
+                        <img src="Images\Project_Template.png" alt="Project 1">
                     </div>
-                    <div class="collumnContainer">
-                        <h4>Hobbies:</h4>
-                        <ul>
-                            <li>Programming</li>
-                            <li>Design</li>
-                            <li>3D Art / Animation</li>
-                        </ul>
-
-                        <h4>TV Shows I love:</h4>
-                        <ul>
-                            <li>Bob's Burgers </li>
-                        </ul>
-
-                        <h4>Education:</h4>
-                        <p>
-                            M.A in Graphics Art with a concentration in Graphic Design<br>
-                            -Atlantic University College, PR
-                            <br> <br>
-                            B.S. in Art Sciences and Video Game Design with <br>
-                            a concentration in Programming <br>
-                            -Atlantic University College, PR
-                        </p>
-
-                        <h4>Languages:</h4>
-                        <ul>
-                            <li>Spanish (Native)</li>
-                            <li>English (Fluent)</li>
-                        </ul>
-
+                </a>
+                <a href="">
+                    <div class="project">
+                        <img src="Images\Project_Template.png" alt="Project 1">
                     </div>
-                    <div class="collumnContainer">
-                        <h4>Programming Languages:</h4>
-                        <ul>
-                            <li>C++</li>
-                            <li>C#</li>
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>GDScript</li>
-                        </ul>
-
-                        <h4>Project Management & Version Control:</h4>
-                        <ul>
-                            <li>Agile</li>
-                            <li>Atlassian Tools (Jira, Confluence, Trello)</li>
-                            <li>Git (GitHub)</li>
-                        </ul>
-
-                        <h4>Game Engines:</h4>
-                        <ul>
-                            <li>Unity Engine</li>
-                            <li>Unreal Engine</li>
-                            <li>Godot</li>
-                        </ul>
-
-                        <h4>Tools:</h4>
-                        <ul>
-                            <li>Blender</li>
-                            <li>GitHub</li>
-                            <li>Visual Studio</li>
-                            <li>Microsoft Office Tools (Excel, Powerpoint, etc)</li>
-                            <li>Adobe Creative Cloud</li>
-                        </ul>
-
-                        <h4>Others:</h4>
-                        <p>HTML, CSS, SQL, PHP, 3D Modeling & Animation</p>
-                    </div>
-                </div>
+                </a>
+                <!-- Add more projects as needed -->
             </div>
 
-            <hr>
-        </div>
-        <footer>
-            <div class="rowContainer">
-                <div class="footer-column">
-                    <div class="ContactFooter">
-                        <h3>Contact:</h3>
-                        <p>contact@bryanroman.design</p>
+            <h1 data-translate="trans-gamejam">GAME JAMS</h1>
+            <div class="projects-grid">
+                 <a href="">
+                    <div class="project">
+                        <img src="Images\Project_Template.png" alt="Project 1">
                     </div>
-                </div>
-                <div class="footer-column">
-                    <div class="logo"><a href="index.html"><img src = "Logo.png"></a></div>
-                </div>
-                <div class="footer-column">
-                    <ul class="social-links">
-                        <li><a class="social-link" href="https://twitter.com/BryanODev"><img src="twitter-xxl.png"></a></li>
-                        <li><a class="social-link" href="https://www.linkedin.com/in/bryanodev/"><img src="linkedin-xxl.png"></a></li>
-                        <li><a class="social-link" href="https://github.com/BryanODev"><img src="github-mark.png"></a></li>
-                        <li><a class="social-link" href="https://bryano.itch.io/"><img src="Itch.Io.png"></a></li>
-                      </ul>
-                </div>
+                </a>
+
+                 <a href="">
+                    <div class="project">
+                        <img src="Images\Project_Template.png" alt="Project 1">
+                    </div>
+                </a>
+
+                 <a href="">
+                    <div class="project">
+                        <img src="Images\Project_Template.png" alt="Project 1">
+                    </div>
+                </a>
+                <!-- Add more projects as needed -->
             </div>
-        </footer>
-    </body>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="script.js"></script>
+</body>
+
 </html>
