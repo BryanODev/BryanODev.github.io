@@ -319,6 +319,16 @@ h1 {
   perspective: 800px; /* needed for 3D effect */
 }
 
+.floating-icon img {
+    -webkit-user-select: none; /* Safari/Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+    user-select: none;         /* standard */
+    
+    -webkit-touch-callout: none; /* disable long-press menu on iOS */
+    -webkit-tap-highlight-color: transparent; /* remove blue highlight on tap */
+}
+
 /* wrapper does the floating up and down */
 .icon-wrapper {
   display: inline-block;
@@ -391,10 +401,10 @@ h1 {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* smaller min width */
+  gap: 10px; /* smaller spacing */
+  max-width: 1200px; /* or adjust to fit your design */
+  margin: 0 auto; /* centers the whole grid */
   padding-left: 10px;
   padding-right: 10px;
 }
