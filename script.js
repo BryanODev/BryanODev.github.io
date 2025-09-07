@@ -190,3 +190,87 @@ icon.addEventListener('contextmenu', (e) => {
   e.preventDefault();
   console.log('Right-click disabled on icon');
 });
+
+// ===== STAR BURST ON ICON CLICK =====
+var stars = 15;
+var starSize = 80;
+var starDistance = 200;
+var starSpeed = 1.25;
+var colors = ["#e84545", "#f9cb40", "#2d9cdb", "#48cc61"];
+
+function buildStars() {
+  for (let i = 0; i < stars; i++) {
+    var id = 'gStar' + i;
+    var sz = Math.floor((Math.random() * (starSize)) + (starSize / 3));
+    var createStar = {
+      id: id,
+      class: "gStar",
+      html: '<i class="fa fa-star"></i>',
+      css: {
+        position: 'absolute',
+        zIndex: 510,
+        fontSize: sz + 'px',
+        opacity: 0
+      }
+    };
+    $("body").append($("<div>", createStar));
+  }
+}
+
+function fireStars(e) {
+  e.preventDefault();
+
+  const icon = $(e.currentTarget)[0];
+
+  // Get the icon's center relative to the document, works on mobile & desktop
+  const rect = icon.getBoundingClientRect();
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+  const iconCenterX = rect.left + scrollLeft + rect.width / 2;
+  const iconCenterY = rect.top + scrollTop + rect.height / 2;
+
+  const colors = ["#e84545", "#f9cb40", "#2d9cdb", "#48cc61"];
+
+  for (let i = 0; i < stars; i++) {
+    const sz = parseFloat($("#gStar" + i).css("font-size"));
+    const angle = Math.random() * 2 * Math.PI;
+    const distance = Math.random() * starDistance;
+
+    const x = Math.cos(angle) * distance;
+    const y = Math.sin(angle) * distance;
+
+    const tl = gsap.timeline();
+    tl.set('#gStar' + i, {
+      x: 0,
+      y: 0,
+      rotation: 0,
+      scale: 0.35,
+      left: iconCenterX - sz / 2,
+      top: iconCenterY - sz / 2,
+      color: colors[i % colors.length]
+    })
+    .to('#gStar' + i, 0.35, { autoAlpha: 0.7 })
+    .to('#gStar' + i, 0.6, {
+      x: x,
+      y: y - 50,
+      rotation: 280,
+      scale: 1,
+      ease: "power1.out"
+    }, '<')
+    .to('#gStar' + i, 0.35, {
+      autoAlpha: 0,
+      y: "+=50",
+      force3D: true
+    }, ">-.25");
+  }
+}
+
+
+
+
+// Build stars once
+buildStars();
+
+// Trigger when clicking your floating icon
+$("#icon").click(fireStars);
